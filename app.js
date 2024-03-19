@@ -22,6 +22,8 @@ app.get('/articles', async (req, res) => {
         });
 
         const articles = response.data.results;
+        
+
         res.render('mostpopular', { articles }); 
 
         console.log(articles)
@@ -32,23 +34,11 @@ app.get('/articles', async (req, res) => {
 });
 
 
-app.get('/topstories/:section', async (req, res) => {
-    const section = req.params.section;
-    try {
-        const response = await axios.get(`https://api.nytimes.com/svc/topstories/v2/${section}.json`, {
-            params: {
-                'api-key': apiKey
-            }
-        });
+const topStoriesRoutes = require('./routes/topStories');
+topStoriesRoutes(app, apiKey);
 
-        const articles = response.data.results;
-        res.render('topstories', { section, articles });
-    } catch (error) {
-        console.error('Error fetching top stories:', error);
-        res.status(500).json({ error: 'Internal Server Error' });
-    }
-});
-
+const booksreviewbestsellerapi = require('./routes/booksreviewbestsellerapi');
+booksreviewbestsellerapi(app, apiKey);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

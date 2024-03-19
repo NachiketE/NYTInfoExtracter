@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Sellers List</title>
+</head>
+<body>
+    <h1>Best Sellers List</h1>
+    <ul>
+        <% bookList.books.forEach(book => { %>
+            <li>
+                <h2><%= book.title %></h2>
+                <p><%= book.description %></p>
+                <p>Author: <%= book.author %></p>
+                <img src="<%= book.book_image %>" alt="<%= book.title %>">
+                <p>Price: <%= book.price %></p>
+                <p>Publisher: <%= book.publisher %></p>
+                <p>ISBN-10: <%= book.primary_isbn10 %></p>
+                <p>ISBN-13: <%= book.primary_isbn13 %></p>
+                <p><a href="<%= book.amazon_product_url %>">Buy on Amazon</a></p>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>
