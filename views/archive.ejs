@@ -1,0 +1,30 @@
+<!-- archive.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New York Times Archive</title>
+</head>
+<body>
+    <h1>New York Times Archive</h1>
+    <ul>
+        <% articles.forEach(article => { %>
+            <li>
+                <h2><a href="<%= article.web_url %>"><%= article.headline.main %></a></h2>
+                <p><%= article.snippet %></p>
+                <p>Published Date: <%= new Date(article.pub_date).toDateString() %></p>
+                <p>Source: <%= article.source %></p>
+                <p>Section: <%= article.section_name %></p>
+                <p>By: 
+                    <% article.byline.person.forEach(person => { %>
+                        <%= person.firstname %> <%= person.lastname %>
+                    <% }); %>
+                </p>
+                <p>Word Count: <%= article.word_count %></p>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>

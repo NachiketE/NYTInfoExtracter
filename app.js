@@ -43,6 +43,12 @@ booksreviewbestsellerapi(app, apiKey);
 const articleSearch = require('./routes/articleSearch');
 articleSearch(app, apiKey);
 
+const archive = require('./routes/archive');
+archive(app, apiKey);
+
+const mostEmailed = require('./routes/mostEmailed');
+mostEmailed(app, apiKey);
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
