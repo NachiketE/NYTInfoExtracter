@@ -40,6 +40,9 @@ topStoriesRoutes(app, apiKey);
 const booksreviewbestsellerapi = require('./routes/booksreviewbestsellerapi');
 booksreviewbestsellerapi(app, apiKey);
 
+const articleSearch = require('./routes/articleSearch');
+articleSearch(app, apiKey);
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);

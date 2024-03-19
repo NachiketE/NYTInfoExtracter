@@ -2,7 +2,7 @@ const axios = require('axios');
 
 
 module.exports = (app, apiKey) => {
-    app.get('/best-sellers-list-by-date/:date/:list', async (req, res) => {
+    app.get('/best-date/:date/:list', async (req, res) => {
         const { date, list } = req.params;
 
         try {
@@ -13,6 +13,9 @@ module.exports = (app, apiKey) => {
             });
 
             const bookList = response.data.results;
+            console.log(response);
+            console.log(bookList);
+
             // res.json(bookList);
             res.render('booksreviewbestsellerapi', { date, list, bookList });
         } catch (error) {

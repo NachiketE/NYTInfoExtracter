@@ -12,7 +12,7 @@ module.exports = (app, apiKey) => {
             });
 
             const articles = response.data.results;
-            res.render('booksreviewbestsellerapi', { section, articles });
+            res.render('topstories', { section, articles });
         } catch (error) {
             console.error('Error fetching top stories:', error);
             res.status(500).json({ error: 'Internal Server Error' });

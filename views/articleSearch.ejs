@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Search Results</title>
+    <!-- Add your CSS stylesheets or CDN links here -->
+</head>
+<body>
+    <h1>Article Search Results</h1>
+    <% if (articles.length > 0) { %>
+        <ul>
+            <% articles.forEach(article => { %>
+                <li>
+                    <h2><%= article.headline.main %></h2>
+                    <p><%= article.snippet %></p>
+                    <p>Published: <%= new Date(article.pub_date).toLocaleDateString() %></p>
+                    <p>Section: <%= article.section_name %></p>
+                    <!-- Add additional information you want to display -->
+                </li>
+            <% }); %>
+        </ul>
+    <% } else { %>
+        <p>No articles found.</p>
+    <% } %>
+    <!-- Add your JavaScript scripts or CDN links here -->
+</body>
+</html>
