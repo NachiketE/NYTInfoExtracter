@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Sellers List History</title>
+</head>
+<body>
+    <h1>Best Sellers List History</h1>
+    <ul>
+        <% bestSellersHistory.forEach(eachBestSeller => { %>
+            <li>
+                <p>Date: <%= eachBestSeller.title %></p>
+                <p>Author: <%= eachBestSeller.author %></p>
+                <p>List Name: <%= eachBestSeller.description %></p>
+                
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>
