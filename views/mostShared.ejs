@@ -1,0 +1,30 @@
+<!-- mostEmailed.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Most Shared Articles</title>
+</head>
+<body>
+    <h1>Most Shared Articles</h1>
+    <ul>
+        <% articles.forEach(article => { %>
+            <li>
+                <h2><a href="<%= article.url %>"><%= article.title %></a></h2>
+                <p><%= article.abstract %></p>
+                <p><strong>Published Date:</strong> <%= article.published_date %></p>
+                <p><strong>By:</strong> <%= article.byline %></p>
+                <p><strong>Section:</strong> <%= article.section %></p>
+                <p><strong>Subsection:</strong> <%= article.subsection %></p>
+                <p><strong>Keywords:</strong> <%= article.adx_keywords %></p>
+                <% if (article.media.length > 0) { %>
+                    <h3>Media</h3>
+                    <img src="<%= article.media[0]['media-metadata'][0].url %>" alt="Article Image">
+                <% } %>
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>

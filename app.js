@@ -49,6 +49,9 @@ archive(app, apiKey);
 const mostEmailed = require('./routes/mostEmailed');
 mostEmailed(app, apiKey);
 
+const mostShared = require('./routes/mostShared');
+mostShared(app, apiKey);
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
