@@ -1,0 +1,34 @@
+<!-- bestSellersByDate.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Sellers</title>
+    <style>
+        /* Add your custom styles here */
+    </style>
+</head>
+<body>
+    <h1>Best Sellers for <%= bestSellers.results.bestsellers_date %></h1>
+    <ul>
+        <% bestSellers.results.books.forEach(book => { %>
+            <li>
+                <div>
+                    <img src="<%= book.book_image %>" alt="<%= book.title %>" width="<%= book.book_image_width %>" height="<%= book.book_image_height %>">
+                    <h2><%= book.title %></h2>
+                    <h3>by <%= book.author %></h3>
+                    <p><%= book.description %></p>
+                    <p>Publisher: <%= book.publisher %></p>
+                    <p>Price: $<%= book.price %></p>
+                    <p>ISBN-10: <%= book.primary_isbn10 %></p>
+                    <p>ISBN-13: <%= book.primary_isbn13 %></p>
+                    <p>Weeks on List: <%= book.weeks_on_list %></p>
+                    <a href="<%= book.amazon_product_url %>">Buy on Amazon</a>
+                </div>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>

@@ -16,13 +16,11 @@
                     <p><%= article.snippet %></p>
                     <p>Published: <%= new Date(article.pub_date).toLocaleDateString() %></p>
                     <p>Section: <%= article.section_name %></p>
-                    <!-- Add additional information you want to display -->
                 </li>
             <% }); %>
         </ul>
     <% } else { %>
         <p>No articles found.</p>
     <% } %>
-    <!-- Add your JavaScript scripts or CDN links here -->
 </body>
 </html>

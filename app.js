@@ -11,8 +11,7 @@ app.get('/', (req, res) => {
 
 app.use(express.static('public'));
 
-
-// Define a route to fetch data from the API
+//Testing API
 app.get('/articles', async (req, res) => {
     try {
         const response = await axios.get('https://api.nytimes.com/svc/mostpopular/v2/emailed/7.json', {
@@ -37,8 +36,11 @@ app.get('/articles', async (req, res) => {
 const topStoriesRoutes = require('./routes/topStories');
 topStoriesRoutes(app, apiKey);
 
-const booksreviewbestsellerapi = require('./routes/booksreviewbestsellerapi');
-booksreviewbestsellerapi(app, apiKey);
+const bestSellersHistory = require('./routes/bestSellersHistory');
+bestSellersHistory(app, apiKey);
+
+const bestSellersByDate = require('./routes/bestSellersByDate');
+bestSellersByDate(app, apiKey);
 
 const articleSearch = require('./routes/articleSearch');
 articleSearch(app, apiKey);
