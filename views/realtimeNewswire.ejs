@@ -1,0 +1,26 @@
+<!-- realtimeNewswire.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realtime Newswire</title>
+</head>
+<body>
+    <h1>Realtime Newswire</h1>
+    <ul>
+        <% articles.forEach(article => { %>
+            <li>
+                <h2><a href="<%= article.url %>"><%= article.title %></a></h2>
+                <p><%= article.abstract %></p>
+                <p><strong>Section:</strong> <%= article.section %></p>
+                <p><strong>Published Date:</strong> <%= new Date(article.published_date).toLocaleString() %></p>
+                <p><strong>Byline:</strong> <%= article.byline %></p>
+                <p><strong>Source:</strong> <%= article.source %></p>
+                <hr>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>
