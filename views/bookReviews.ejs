@@ -1,0 +1,27 @@
+<!-- bookReviews.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Reviews</title>
+    <style>
+        /* Add your custom styles here */
+    </style>
+</head>
+<body>
+    <h1>Book Reviews</h1>
+    <ul>
+        <% bookReviews.forEach(review => { %>
+            <li>
+                <h2><a href="<%= review.url %>"><%= review.book_title %></a></h2>
+                <p><%= review.summary %></p>
+                <p><strong>Publication Date:</strong> <%= review.publication_dt %></p>
+                <p><strong>By:</strong> <%= review.byline %></p>
+                <p><strong>ISBN-13:</strong> <%= review.isbn13.join(', ') %></p>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>

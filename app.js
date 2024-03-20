@@ -63,6 +63,10 @@ realtimeNewswire(app, apiKey);
 const sectionList = require('./routes/newswireSectionList');
 sectionList(app, apiKey);
 
+const bookReviews = require('./routes/bookReviews');
+bookReviews(app, apiKey);
+
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
