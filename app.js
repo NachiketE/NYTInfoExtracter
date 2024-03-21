@@ -5,32 +5,24 @@ const apiKey = 'gckYpXqcXTIGTPgFAZdDMkKSwKPAD1a5';
 
 app.set('view engine', 'ejs');
 
-app.get('/', (req, res) => {
-    res.render('index', { title: 'Homepage' }); 
-  });
-
-app.use(express.static('public'));
-
-//Testing API
-app.get('/articles', async (req, res) => {
+app.get('/', async (req, res) => {
     try {
-        const response = await axios.get('https://api.nytimes.com/svc/mostpopular/v2/emailed/7.json', {
+        const response = await axios.get('https://api.nytimes.com/svc/topstories/v2/world.json', {
             params: {
                 'api-key': apiKey
             }
         });
 
         const articles = response.data.results;
-        
-
-        res.render('mostpopular', { articles }); 
-
-        console.log(articles)
+        res.render('index', { title: 'Homepage', articles }); 
     } catch (error) {
-        console.error('Error fetching articles:', error);
+        console.error('Error fetching top stories:', error);
         res.status(500).json({ error: 'Internal Server Error' });
     }
 });
+
+app.use(express.static('public'));
+
 
 
 const topStoriesRoutes = require('./routes/topStories');
