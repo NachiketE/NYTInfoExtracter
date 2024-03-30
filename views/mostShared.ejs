@@ -1,30 +1,31 @@
-<!-- mostEmailed.ejs -->
+<%- include('home') %>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Most Shared Articles</title>
-</head>
-<body>
-    <h1>Most Shared Articles</h1>
-    <ul>
+<h1 class="text-center mt-3 mb-4">Most Shared Articles</h1>
+<div class="container">
+    <div class="row">
         <% articles.forEach(article => { %>
-            <li>
-                <h2><a href="<%= article.url %>"><%= article.title %></a></h2>
-                <p><%= article.abstract %></p>
-                <p><strong>Published Date:</strong> <%= article.published_date %></p>
-                <p><strong>By:</strong> <%= article.byline %></p>
-                <p><strong>Section:</strong> <%= article.section %></p>
-                <p><strong>Subsection:</strong> <%= article.subsection %></p>
-                <p><strong>Keywords:</strong> <%= article.adx_keywords %></p>
-                <% if (article.media.length > 0) { %>
-                    <h3>Media</h3>
-                    <img src="<%= article.media[0]['media-metadata'][0].url %>" alt="Article Image">
-                <% } %>
-            </li>
+            <div class="col-lg-4 col-md-6 col-sm-12"> <!-- For desktop, each card takes 4 columns (3 cards per row), for tablets 6 columns, for mobile 12 columns (1 card per row) -->
+                <div class="card">
+                    <% if (article.media && article.media[0] && article.media[0]['media-metadata'] && article.media[0]['media-metadata'][0] && article.media[0]['media-metadata'][0].url) { %>
+                        <img class="card-img-top" src="<%= article.media[0]['media-metadata'][0].url %>" alt="Card image cap">
+                    <% } else { %>
+                        <img class="card-img-top" src="https://as2.ftcdn.net/v2/jpg/00/82/35/99/1000_F_82359910_L1SQ8T2W6qh57sD0N0nnWho1e2Zh6AUH.jpg" alt="Default Image">
+                    <% } %>
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="<%= article.url %>"><%= article.title %></a></h5>
+                        <p class="card-text"><strong>By:</strong> <%= article.byline %></p>
+                        <p class="card-text"><strong>Published Date:</strong> <%= article.published_date %></p>
+                        <p class="card-text"><%= article.abstract %></p>
+                    </div>
+                    <div class="card-footer">
+                        <strong>Section:</strong> <%= article.section %>
+                    </div>
+                </div>
+            </div>
         <% }) %>
-    </ul>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
