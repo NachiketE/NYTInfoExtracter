@@ -13,8 +13,8 @@ app.get('/', async (req, res) => {
             }
         });
 
-        const articles = response.data.results;
-        res.render('index', { title: 'Homepage', articles }); 
+        const articlesCarousel = response.data.results;
+        res.render('index', { title: 'Homepage', articlesCarousel }); 
     } catch (error) {
         console.error('Error fetching top stories:', error);
         res.status(500).json({ error: 'Internal Server Error' });
