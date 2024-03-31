@@ -2,6 +2,9 @@
 
 This project is a multiple-page web application that displays information retrieved from the New York Times API. It provides various features and functionalities for users to explore and interact with the data provided by the API.
 
+Walkthrough of the WebApp, highlighting its features: 
+https://youtu.be/nlBmdORVEr8
+
 ## Installation
 
 ```bash
