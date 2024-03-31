@@ -5,7 +5,7 @@ This project is a multiple-page web application that displays information retrie
 Walkthrough of the WebApp, highlighting its features: 
 https://youtu.be/nlBmdORVEr8
 
-## Installation
+## Installation and Usage
 
 ```bash
 git clone https://github.com/NachiketE/NYTInfoExtracter.git
@@ -16,6 +16,9 @@ npm install
 ```bash
 node app.js
 ```
+
+Access the WebApp using: http://localhost:3000/
+
 ## Features
 
 - Node.js with Express framework
