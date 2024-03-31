@@ -7,7 +7,7 @@
         <form id="searchForm" action="/articlesearch" method="GET">
             <div class="input-group">
                 <input type="text" class="form-control" id="searchInput" name="q" placeholder="Search articles...">
-                <button type="submit" class="btn btn-primary">Search</button>
+                <button type="submit" class="btn btn-dark">Search</button>
             </div>
         </form>
     </div>
@@ -49,8 +49,9 @@
 
     </div>
 
+    <div class="container" style="margin-top: 4%; display: flex; justify-content: center; align-items: center;">
 
-    <div class="container" style="margin-top: 2%;">
+    <div >
         <h3 class="text-center mb-4">Do you want to checkout some old articles from NYT?</h3>
         <div class="row justify-content-center">
             <div class="col-md-4">
@@ -74,33 +75,37 @@
                 <input type="number" class="form-control" id="yearInput" placeholder="Enter year (1862-2024)" min="1862" max="2024">
             </div>
             <div class="col-md-4">
-                <button type="button" class="btn btn-primary" onclick="searchArchive()">Search</button>
+                <button type="button" class="btn btn-dark" onclick="searchArchive()">Search</button>
             </div>
         </div>
     </div>
+    </div>
     
-    <div class="container" style="margin-top: 2%;">
-        <h3 class="text-center mb-4">Do you want to checkout reviews from NYT for a book that you want to read?</h3>
-        <form id="bookForm" action="/book-reviews" method="GET">
-            <div class="row justify-content-center">
-                <div class="col-md-4">
-                    <select class="form-select" id="SearchType">
-                        <option selected>Choose how you want to search your book review</option>
-                        <option value="title">Title</option>
-                        <option value="author">Author</option>
-                        <option value="isbn">ISBN</option>
-                    </select>
+    <div class="container" style="margin-top: 4%; display: flex; justify-content: center; align-items: center;">
+        <div>
+            <h3 class="text-center mb-4">Do you want to checkout reviews from NYT for a book that you want to read?</h3>
+            <form id="bookForm" action="/book-reviews" method="GET">
+                <div class="row justify-content-center">
+                    <div class="col-md-4">
+                        <select class="form-select " id="SearchType">
+                            <option selected>Choose how you want to search your book review</option>
+                            <option value="title">Title</option>
+                            <option value="author">Author</option>
+                            <option value="isbn">ISBN</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" id="bookInput" placeholder="Search book review...">
+                    </div>
+                    <div class="col-md-4">
+                        <button type="submit" id="searchButton" class="btn btn-dark">Search</button>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <input type="text" class="form-control" id="bookInput" placeholder="Search book review...">
-                </div>
-                <div class="col-md-4">
-                    <button type="submit" id="searchButton" class="btn btn-primary">Search</button>
-                </div>
-            </div>
-        </form>
-        
-            </div>
+            </form>
+        </div>
+    </div>
+    
+    
         </div>
     </div>
 
