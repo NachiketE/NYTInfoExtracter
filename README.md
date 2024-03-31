@@ -21,3 +21,10 @@ This project is a multiple-page web application that displays information retrie
 ```bash
 git clone https://github.com/NachiketE/NYTInfoExtracter.git
 
+### 2. Navigate to the project directory
+
+### 2. Navigate to the project directory
+```bash
+npm install
+
+
