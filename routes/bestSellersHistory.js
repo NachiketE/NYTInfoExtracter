@@ -22,7 +22,7 @@ module.exports = (app, apiKey) => {
             });
 
             const bestSellersHistory = response.data.results;
-            // res.json(bookList);
+            
             res.render('bestSellersHistory', { bestSellersHistory});
         } catch (error) {
             console.error('Error fetching top stories:', error);

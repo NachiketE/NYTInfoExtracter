@@ -11,9 +11,9 @@
             padding: 0;
         }
         .card {
-            margin-bottom: 20px; /* Add space between cards */
+            margin-bottom: 20px; 
         }
-        /* styles.css */
+        
         #loader {
             position: fixed;
             top: 0;
@@ -29,13 +29,13 @@
 
     
     </style>
-    <!-- index.ejs -->
+    
     <script>
         window.addEventListener('DOMContentLoaded', (event) => {
-            // Show loader when the page starts loading
+            
             document.getElementById('loader').classList.remove('d-none');
 
-            // Fetch data using AJAX or other methods
+            
             fetch('/most-emailed')
     .then(response => response.json())
     .then(data => {
@@ -53,7 +53,7 @@
 
 </head>
 <body class="bg-gray-100">
-    <!-- Navigation Bar -->
+    
 
     <div id="loader" class="d-none">
         <div class="spinner-border text-primary" role="status">
@@ -77,31 +77,31 @@
                             Top Stories
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/topstories/US" target="_blank">US</a></li>
-                            <li><a class="dropdown-item" href="/topstories/world" target="_blank">World</a></li>
+                            <li><a class="dropdown-item" href="/topstories/US" >US</a></li>
+                            <li><a class="dropdown-item" href="/topstories/world" >World</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="/topstories/arts" target="_blank">Arts</a></li>
-                            <li><a class="dropdown-item" href="/topstories/automobiles" target="_blank">Automobiles</a></li>
-                            <li><a class="dropdown-item" href="/topstories/fashion" target="_blank">Fashion</a></li>
-                            <li><a class="dropdown-item" href="/topstories/food" target="_blank">Food</a></li>
-                            <li><a class="dropdown-item" href="/topstories/health" target="_blank">Health</a></li>
-                            <li><a class="dropdown-item" href="/topstories/home" target="_blank">Home</a></li>
-                            <li><a class="dropdown-item" href="/topstories/insider" target="_blank">Insider</a></li>
-                            <li><a class="dropdown-item" href="/topstories/magazine" target="_blank">Magazine</a></li>
-                            <li><a class="dropdown-item" href="/topstories/movies" target="_blank">Movies</a></li>
-                            <li><a class="dropdown-item" href="/topstories/nyregion" target="_blank">NY Region</a></li>
-                            <li><a class="dropdown-item" href="/topstories/obituaries" target="_blank">Obituaries</a></li>
-                            <li><a class="dropdown-item" href="/topstories/opinion" target="_blank">Opinion</a></li>
-                            <li><a class="dropdown-item" href="/topstories/politics" target="_blank">Politics</a></li>
-                            <li><a class="dropdown-item" href="/topstories/realestate" target="_blank">Real Estate</a></li>
-                            <li><a class="dropdown-item" href="/topstories/science" target="_blank">Science</a></li>
-                            <li><a class="dropdown-item" href="/topstories/sports" target="_blank">Sports</a></li>
-                            <li><a class="dropdown-item" href="/topstories/sundayreview" target="_blank">Sunday Review</a></li>
-                            <li><a class="dropdown-item" href="/topstories/technology" target="_blank">Technology</a></li>
-                            <li><a class="dropdown-item" href="/topstories/theater" target="_blank">Theater</a></li>
-                            <li><a class="dropdown-item" href="/topstories/t-magazine" target="_blank">T-magazine</a></li>
-                            <li><a class="dropdown-item" href="/topstories/travel" target="_blank">Travel</a></li>
-                            <li><a class="dropdown-item" href="/topstories/upshot" target="_blank">Upshot</a></li>
+                            <li><a class="dropdown-item" href="/topstories/arts" >Arts</a></li>
+                            <li><a class="dropdown-item" href="/topstories/automobiles" >Automobiles</a></li>
+                            <li><a class="dropdown-item" href="/topstories/fashion" >Fashion</a></li>
+                            <li><a class="dropdown-item" href="/topstories/food" >Food</a></li>
+                            <li><a class="dropdown-item" href="/topstories/health" >Health</a></li>
+                            <li><a class="dropdown-item" href="/topstories/home" >Home</a></li>
+                            <li><a class="dropdown-item" href="/topstories/insider" >Insider</a></li>
+                            <li><a class="dropdown-item" href="/topstories/magazine" >Magazine</a></li>
+                            <li><a class="dropdown-item" href="/topstories/movies" >Movies</a></li>
+                            <li><a class="dropdown-item" href="/topstories/nyregion" >NY Region</a></li>
+                            <li><a class="dropdown-item" href="/topstories/obituaries" >Obituaries</a></li>
+                            <li><a class="dropdown-item" href="/topstories/opinion" >Opinion</a></li>
+                            <li><a class="dropdown-item" href="/topstories/politics" >Politics</a></li>
+                            <li><a class="dropdown-item" href="/topstories/realestate" >Real Estate</a></li>
+                            <li><a class="dropdown-item" href="/topstories/science" >Science</a></li>
+                            <li><a class="dropdown-item" href="/topstories/sports" >Sports</a></li>
+                            <li><a class="dropdown-item" href="/topstories/sundayreview" >Sunday Review</a></li>
+                            <li><a class="dropdown-item" href="/topstories/technology" >Technology</a></li>
+                            <li><a class="dropdown-item" href="/topstories/theater" >Theater</a></li>
+                            <li><a class="dropdown-item" href="/topstories/t-magazine" >T-magazine</a></li>
+                            <li><a class="dropdown-item" href="/topstories/travel" >Travel</a></li>
+                            <li><a class="dropdown-item" href="/topstories/upshot" >Upshot</a></li>
                             
                         </ul>
                     </li>
@@ -111,9 +111,9 @@
                             Most Viewed Articles
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/most-viewed/1" target="_blank">For the last 24 hours</a></li>
-                            <li><a class="dropdown-item" href="/most-viewed/7" target="_blank">For the last 7 days</a></li>
-                            <li><a class="dropdown-item" href="/most-viewed/30" target="_blank">For the last 30 days</a></li>
+                            <li><a class="dropdown-item" href="/most-viewed/1" >For the last 24 hours</a></li>
+                            <li><a class="dropdown-item" href="/most-viewed/7" >For the last 7 days</a></li>
+                            <li><a class="dropdown-item" href="/most-viewed/30" >For the last 30 days</a></li>
                         </ul>
                     </li>
 
@@ -122,9 +122,9 @@
                             Most Shared Articles
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/most-shared/1" target="_blank">For the last 24 hours</a></li>
-                            <li><a class="dropdown-item" href="/most-shared/7" target="_blank">For the last 7 days</a></li>
-                            <li><a class="dropdown-item" href="/most-shared/30" target="_blank">For the last 30 days</a></li>
+                            <li><a class="dropdown-item" href="/most-shared/1" >For the last 24 hours</a></li>
+                            <li><a class="dropdown-item" href="/most-shared/7" >For the last 7 days</a></li>
+                            <li><a class="dropdown-item" href="/most-shared/30" >For the last 30 days</a></li>
                         </ul>
                     </li>
 
@@ -134,8 +134,8 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="/most-emailed/1" >For the last 24 hours</a></li>
-                            <li><a class="dropdown-item" href="/most-emailed/7" target="_blank">For the last 7 days</a></li>
-                            <li><a class="dropdown-item" href="/most-emailed/30" target="_blank">For the last 30 days</a></li>
+                            <li><a class="dropdown-item" href="/most-emailed/7" >For the last 7 days</a></li>
+                            <li><a class="dropdown-item" href="/most-emailed/30" >For the last 30 days</a></li>
                         </ul>
                     </li>
 

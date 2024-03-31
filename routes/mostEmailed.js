@@ -1,8 +1,6 @@
-// mostEmailed.js
-
 const axios = require('axios');
 
-module.exports = (app, apiKey) => {
+const mostEmailed = async (app, apiKey) => {
     app.get('/most-emailed/:period', async (req, res) => {
         const { period } = req.params;
 
@@ -21,3 +19,5 @@ module.exports = (app, apiKey) => {
         }
     });
 };
+
+module.exports = mostEmailed;

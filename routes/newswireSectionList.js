@@ -1,4 +1,3 @@
-// timesNewswire.js
 
 const axios = require('axios');
 

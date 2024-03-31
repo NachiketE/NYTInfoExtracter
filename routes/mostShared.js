@@ -1,4 +1,3 @@
-// mostEmailed.js
 
 const axios = require('axios');
 

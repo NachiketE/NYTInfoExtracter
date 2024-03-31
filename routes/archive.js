@@ -4,7 +4,6 @@ module.exports = (app, apiKey) => {
     app.get('/archive/:year/:month', async (req, res) => {
         const { year, month } = req.params;
 
-        // Array of month names
         const monthNames = [
             "January", "February", "March", "April", "May", "June",
             "July", "August", "September", "October", "November", "December"
@@ -18,7 +17,7 @@ module.exports = (app, apiKey) => {
             });
 
             const articles = response.data.response.docs;
-            const monthName = monthNames[parseInt(month) - 1]; // Get month name from array
+            const monthName = monthNames[parseInt(month) - 1]; 
             res.render('archive', { articles, year, month: monthName });
         } catch (error) {
             console.error('Error fetching articles:', error);

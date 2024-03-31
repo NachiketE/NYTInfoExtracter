@@ -1,4 +1,3 @@
-// bestSellers.js
 
 const axios = require('axios');
 
